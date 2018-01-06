@@ -162,7 +162,7 @@ class LearningAgent(Agent):
         return
 
 
-def run(a, alpha=0.5, epsilon=1.0, tolerance=0.05):
+def run(a, alpha=0.5, epsilon=1.0, tolerance=0.005):
     """ Driving function for running the simulation. 
         Press ESC to close the simulation, or [SPACE] to pause the simulation. """
 
@@ -204,13 +204,11 @@ def run(a, alpha=0.5, epsilon=1.0, tolerance=0.05):
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run( tolerance=0.005)
+    sim.run(n_test=50, tolerance=0.005)
 
 
 if __name__ == '__main__':
-    alpha = 10.0
-    epsilon = 0.1
-    tolerance = 0.5
+
 
     # print(map(lambda x: run(10 + x, epsilon=epsilon, alpha=alpha / (10.0 ** x), tolerance=tolerance ), range(1, 4, 1)))
     run(a=0.01)
