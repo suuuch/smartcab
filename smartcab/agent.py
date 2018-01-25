@@ -67,8 +67,7 @@ class LearningAgent(Agent):
         # Set 'state' as a tuple of relevant data for the agent        
 
         state = (waypoint, inputs['light'], inputs['left'], inputs['oncoming'], inputs['right'])
-        if state not in self.Q:
-            self.Q[state] = {key: 0 for key in self.valid_actions}
+
         return state
 
     def get_maxQ(self, state):
