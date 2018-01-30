@@ -12373,6 +12373,8 @@ $C_5^5 + C_5^4 + C_5^3 + C_5^2 + C_5^1 $ = 26</p>
 epsilon：探索因子，它平衡了exploration和expliotation的比例</p>
 <p>alpha 可以控制衰减的速度，epsilon 是初始值，tolerance 是最后收敛的值，调整这三个数字的大小可以控制训练次数，同时可以控制对行为训练的密集程度。</p>
 <p>与之前的默认结果相比结果有了大幅提升。</p>
+<p>在 alpha 取值从 <code>[0.5 , 0.005]</code> , epsilon 取值从 <code>[1.0, 0.001]</code> , tolerance 取值从 <code>[0.05, 0.005 ]</code> ，三个值同步递减时，
+取值为 <code>alpha=0.5, epsilon=1.0, tolerance=0.005</code> 运算结果最优。</p>
 <p>我的Q-learning 成功的学习了一个合适的策略。</p>
 <p>对安全性和可靠性评分很满意。</p>
 
